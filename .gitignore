@@ -1,0 +1,14 @@
+# Carlos runtime data
+carlos_data/
+training_data.csv
+memory.json
+transcript.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
