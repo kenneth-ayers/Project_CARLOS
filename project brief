@@ -1,0 +1,125 @@
+Senior Engineering Project Brief
+Project CARLOS: A Human-Safe, Compliant Actuation Testbed for Companion Robotics
+Project Overview
+
+Project CARLOS is a human-scale robotic research platform developed to investigate safe actuation, failure containment, and predictable behavior in robots operating in close physical proximity to humans.
+
+The project emphasizes conservative mechanical and control design over performance-driven optimization, with the goal of demonstrating how human-safe motion can be achieved through deliberate limitation of force, speed, and autonomy, rather than reliance on software intelligence alone.
+
+CARLOS is not intended to demonstrate general artificial intelligence or high-performance manipulation. Instead, it serves as a systems engineering testbed for studying how robots can behave predictably, transparently, and safely when operating under uncertainty.
+
+Engineering Focus and Primary Contribution
+
+The primary engineering contribution of this senior project is the design, implementation, and validation of a force-limited, compliant actuation subsystem suitable for human-proximate robotics.
+
+This includes:
+
+mechanical design of compliant interaction zones
+
+selection and justification of low-energy actuation methods
+
+definition of conservative force and speed limits
+
+integration of mechanical compliance with control-level safety constraints
+
+validation of safe behavior under nominal and degraded operating conditions
+
+The CARLOS platform provides system-level context, while the actuation subsystem represents the core deliverable of the project.
+
+Design Philosophy
+
+The system is designed using a “when, not if” failure philosophy, assuming that sensor noise, communication loss, component degradation, and human misuse are normal operating conditions, not exceptional events.
+
+Accordingly, the design prioritizes:
+
+fail-soft mechanical behavior
+
+predictable state transitions
+
+safe default states
+
+graceful degradation over task completion
+
+Mechanical and control decisions are made to minimize stored energy and prevent hazardous motion even in the absence of correct software behavior.
+
+Mechanical and Actuation Design
+
+Mechanical design emphasizes:
+
+low-energy actuation
+
+passive compliance where possible
+
+intentional limitations on torque, speed, and range of motion
+
+mechanical features that reduce injury risk during contact
+
+Actuator selection is justified through trade studies considering:
+
+force capability vs. human safety limits
+
+response time vs. stability
+
+efficiency vs. controllability
+
+failure behavior (powered vs. unpowered states)
+
+The resulting design prioritizes physical safety guarantees over software-dependent enforcement.
+
+Control Architecture
+
+The control system follows a layered architecture, separating:
+
+low-level actuator control
+
+supervisory safety logic
+
+behavior-level state machines
+
+Autonomy is deliberately constrained. All behaviors operate within explicitly defined safety envelopes, and loss of supervisory control results in controlled shutdown or mechanically safe states rather than continued operation.
+
+Safety Analysis and Validation
+
+A Failure Modes and Effects Analysis (FMEA) is conducted throughout development to:
+
+identify hazardous interactions
+
+trace failure propagation paths
+
+guide mechanical and control-level mitigations
+
+Safety validation focuses on:
+
+behavior under sensor failure
+
+behavior during communication loss
+
+response to unexpected human interaction
+
+shutdown and recovery behavior
+
+Testing prioritizes predictability and containment rather than performance metrics.
+
+Scope and Limitations
+
+This project intentionally avoids:
+
+general intelligence claims
+
+high-speed manipulation
+
+optimization for task efficiency
+
+emotionally expressive or social robotics goals
+
+The focus is on engineering correctness, safety, and reliability, not user experience or demonstration value.
+
+Outcome
+
+Project CARLOS demonstrates how human-safe robotic behavior can be achieved through disciplined mechanical and systems engineering, emphasizing compliance, conservative actuation, and explicit safety reasoning.
+
+The resulting platform serves as a research and teaching testbed for safe human-robot interaction and as a foundation for future work in industrial and service robotics contexts.
+
+Prior Art and Disclosure
+
+The architectural principles and safety concepts explored in this project are documented in a defensive technical disclosure published via Zenodo to establish prior art and ensure public availability of the core ideas.
